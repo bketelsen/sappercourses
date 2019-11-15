@@ -44,11 +44,11 @@ collections:
               - label: "Modules"
                 name: "modules"
                 widget: "relation"
-                collection: "modules.modules.modules"
-                searchFields: ["name"]
-                valueField: "name"
+                collection: "modules"
+                searchFields: ["modules.name"]
+                valueField: "modules.name"
                 multiple: true
-                displayFields: ["name"]
+                displayFields: ["modules.name"]
   - name: Events
     label: Events # Used in the UI
     files:
