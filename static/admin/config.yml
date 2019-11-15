@@ -17,7 +17,7 @@ collections:
     files:
       - name: ModulesFile
         label: ModulesFile 
-        file: data/modulefile.yml
+        file: data/modulelist.yml
         fields:
           - label: Modules
             name: ModuleList 
