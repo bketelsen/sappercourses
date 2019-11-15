@@ -1,0 +1,23 @@
+# code you can use: packages, libraries, components
+# eg youtube, talks, blogposts, tutorials, courses
+resources:
+  - name: 'Learning Go'
+    description: Learn Go the Easy Way
+    tags:
+      - beginner
+      - go
+    last_updated: '2019-10-11T06:24:49Z'
+    modules: [
+      Getting Started,Installing Go,
+      Compiling things
+    ]
+  - name: 'Advanced Go'
+    description: Advanced Go Class
+    tags:
+      - advanced
+      - go
+    last_updated: '2019-10-10T20:08:32Z'
+    modules: [
+      Your Mom,My Mom,
+      Their Mom
+    ]

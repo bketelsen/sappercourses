@@ -1,0 +1,23 @@
+{
+  "name": "courses",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bketelsen/sappercourses.git",
+  "author": "Brian Ketelsen <mail@bjk.fyi>",
+  "license": "MIT",
+  "dependencies": {
+    "@ssgjs/source-yaml": "^0.0.3",
+    "@sveltejs/site-kit": "^1.1.4",
+    "dotenv": "^8.1.0",
+    "fuse.js": "^3.4.5",
+    "js-yaml": "^3.13.1",
+    "node-fetch": "^2.6.0",
+    "ssg": "^0.0.38",
+    "yaml": "^1.7.1"
+  },
+  "scripts": {
+    "start": "ssg dev",
+    "build": "ssg export",
+    "update": "node scripts/updateResources.js"
+  }
+}
