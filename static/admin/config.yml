@@ -12,6 +12,35 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads"
 
 collections:
+  - name: Modules 
+    label: Modules # Used in the UI
+    files:
+      - name: ModulesFile
+        label: ModulesFile 
+        file: data/modulefile.yml
+        fields:
+          - label: Modules
+            name: ModuleList 
+            widget: list
+            fields:
+              - {label: Module Name, name: name, widget: string}
+              - {label: Full Description, name: description, widget: markdown, required: false, hint: "remember you can use markdown"}
+  - name: Courses
+    label: Courses # Used in the UI
+    files:
+      - name: CoursesFile
+        label: CoursesFile 
+        file: data/coursefile.yml
+        fields:
+          - label: Courses 
+            name: CourseList
+            widget: list
+            fields:
+              - {label: Course Name, name: name, widget: string}
+              - {label: Full Description, name: description, widget: markdown, required: false, hint: "remember you can use markdown"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
   - name: Events
     label: Events # Used in the UI
     files:
