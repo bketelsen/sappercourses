@@ -12,70 +12,13 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 public_folder: "/images/uploads"
 
 collections:
-  - label: "Modules"
-    name: "modules"
-    files:
-      - label: "modules"
-        name: "modules"
-        file: "data/modulelist.yml"
-        fields:
-          - label: Modules
-            name: modules 
-            widget: list
-            fields:
-              - {label: Module Name, name: name, widget: string}
-              - {label: Full Description, name: description, widget: markdown, required: false, hint: "remember you can use markdown"}
-  - name: Courses
-    label: Courses # Used in the UI
-    files:
-      - name: CoursesFile
-        label: CoursesFile 
-        file: data/courselist.yml
-        fields:
-          - label: Courses 
-            name: CourseList
-            widget: list
-            fields:
-              - {label: Course Name, name: name, widget: string}
-              - {label: Full Description, name: description, widget: markdown, required: false, hint: "remember you can use markdown"}
-              - label: "Tags"
-                name: "tags"
-                widget: "list"
-              - label: "Modules"
-                name: "modules"
-                widget: "relation"
-                collection: "modules"
-                searchFields: ["modules.modules.name"]
-                valueField: "modules.modules.name"
-                multiple: true
-                displayFields: ["modules.modules.name"]
-  - name: Events
-    label: Events # Used in the UI
-    files:
-      - name: EventsFile
-        label: EventsFile
-        file: data/events.yml
-        fields:
-          - label: Events
-            name: EventsList
-            widget: list
-            fields:
-              - {label: Event Name, name: eventName, widget: string}
-              - {label: URL, name: url, widget: string, hint: "Where people can sign up or learn more or contact Organizers e.g. https://foo.bar.com", required: false}
-              - {label: Country, name: country, widget: string, hint: "Something someone might search, e.g. USA, UK, Sweden, Singapore, Remote"}
-              - {label: City, name: city, widget: string, hint: "Something someone might search, e.g. NYC, London, Stockholm, Singapore, Remote"}
-              - label: Type
-                name: type
-                widget: select
-                options: 
-                  - {label: "Recurring Meetup", value: "Meetup"}
-                  - {label: "One-off Event", value: "One-off"}
-                  - {label: "Workshop", value: "Workshop"}
-                  - {label: "Conference", value: "Conference"}
-                  - {label: "Misc Event", value: "Misc"}
-              - {label: Twitter Handle, name: twitter, widget: string, required: false, hint: "Leave off the twitter.com e.g. @SvelteSociety"}
-              - {label: Specific Date - if applicable, name: date, default: "", widget: datetime, required: false, hint: "We may sort events by date in future. Right now it isn't really enforced, it's up to you to manage if it makes sense."}
-              - {label: Organizer Contact, name: organizer, widget: text, hint: "your name, email, twitter, any way for people to get in touch", required: false }
-              - {label: Cover Image", required: false, name: thumbnail, widget: image }
-              - {label: Short Description, name: desc, widget: string, required: false}
-              - {label: Full Description, name: description, widget: markdown, required: false, hint: "remember you can use markdown"}
+   - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "data/_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
