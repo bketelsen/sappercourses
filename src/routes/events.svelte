@@ -8,8 +8,8 @@
 
 <script>
   import { Hero, Blurb } from "@sveltejs/site-kit";
-  import Event from "components/Event.svelte";
-  import Box from "components/Box.svelte";
+  import Event from "../components/Event.svelte";
+  import Box from "../components/Box.svelte";
   export let events;
   // $: console.log({ events });
 </script>

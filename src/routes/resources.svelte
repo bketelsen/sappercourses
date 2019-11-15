@@ -8,12 +8,12 @@
 
 <script>
   import { Hero, Blurb } from "@sveltejs/site-kit";
-  import Event from "components/Event.svelte";
-  import Box from "components/Box.svelte";
-  import Resource from "components/Resource.svelte";
-  import Tag from "components/Tag.svelte";
-  import { transformResourceData } from "resources/transformResourceData.js";
-  import { filterResourcesByTags } from "resources/helpers.js";
+  import Event from "../components/Event.svelte";
+  import Box from "../components/Box.svelte";
+  import Resource from "../components/Resource.svelte";
+  import Tag from "../components/Tag.svelte";
+  import { transformResourceData } from "../resources/transformResourceData.js";
+  import { filterResourcesByTags } from "../resources/helpers.js";
 
   export let data;
   $: transformedData = transformResourceData(data);
