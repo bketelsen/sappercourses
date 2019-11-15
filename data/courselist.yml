@@ -2,3 +2,8 @@
 # if you want a nice UI to edit this, head to https://svelte-community.netlify.com/admin
 
 CourseList:
+  - name: 'Learning Go'
+    description: Learn Go the Easy Way
+    tags:
+      - beginner
+      - go
