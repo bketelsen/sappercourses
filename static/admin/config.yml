@@ -45,10 +45,10 @@ collections:
                 name: "modules"
                 widget: "relation"
                 collection: "modules"
-                searchFields: ["modules.name"]
-                valueField: "modules.name"
+                searchFields: ["modules.modules.name"]
+                valueField: "modules.modules.name"
                 multiple: true
-                displayFields: ["modules.name"]
+                displayFields: ["modules.modules.name"]
   - name: Events
     label: Events # Used in the UI
     files:
