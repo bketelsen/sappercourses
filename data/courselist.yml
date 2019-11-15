@@ -1,9 +1,12 @@
-# required fields are city, country, eventName, and url
-# if you want a nice UI to edit this, head to https://svelte-community.netlify.com/admin
-
 CourseList:
-  - name: 'Learning Go'
-    description: Learn Go the Easy Way
+  - description: Learn Go the Easy Way
+    name: Learning Go
     tags:
       - beginner
       - go
+  - description: 'Which is amazing, btw.'
+    name: My Other Course
+    tags:
+      - go
+      - other
+      - advanced
