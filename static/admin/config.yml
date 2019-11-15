@@ -30,7 +30,7 @@ collections:
     files:
       - name: CoursesFile
         label: CoursesFile 
-        file: data/coursefile.yml
+        file: data/courselist.yml
         fields:
           - label: Courses 
             name: CourseList
