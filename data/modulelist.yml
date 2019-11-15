@@ -1,2 +1,3 @@
-# required fields are city, country, eventName, and url
-# if you want a nice UI to edit this, head to https://svelte-community.netlify.com/admin
+modules:
+  - description: I'm module one
+    name: Module 1
