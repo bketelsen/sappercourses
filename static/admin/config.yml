@@ -41,6 +41,14 @@ collections:
               - label: "Tags"
                 name: "tags"
                 widget: "list"
+              - label: "Modules"
+                name: "modules"
+                widget: "relation"
+                collection: "modules"
+                searchFields: ["name"]
+                valueField: "name"
+                multiple: true
+                displayFields: ["name"]
   - name: Events
     label: Events # Used in the UI
     files:
